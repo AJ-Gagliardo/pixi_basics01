@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "pixi.js": "^8.8.1",
+    "vite": "^6.2.1"
+  }
+}
