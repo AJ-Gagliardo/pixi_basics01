@@ -8,12 +8,7 @@ import { Application, Graphics } from "pixi.js";
     // height: window.innerHeight,
     resizeTo: window,
     //backgroundAlpha: 0.99,
-    // backgroundColor: "yellow" // hcanges bg color
-    // backgroundColor: 0xffea00, // changes color
-    // anialias: true //avoid using this feature unless its completely neccesary, its for pixelated stuff
   });
-
-  // app.render.background.alpha = 0.3
 
   app.canvas.style.position = "absolute";
 

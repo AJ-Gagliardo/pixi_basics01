@@ -1,0 +1,15 @@
+
+
+
+
+
+4 types of objects we can create
+  geometric shapes
+  text
+  sprites
+  containers
+
+
+Geometric shapes  
+  creates graphic instance and we change it to squares, triangles, etc
+
