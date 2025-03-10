@@ -13,3 +13,8 @@
 Geometric shapes  
   creates graphic instance and we change it to squares, triangles, etc
 
+
+Text  
+  html tags 
+  text()
+  Bitmap

@@ -1,4 +1,4 @@
-import { Application, Graphics } from "pixi.js";
+import { Application, Graphics, Text, TextStyle } from "pixi.js";
 
 (async () => {
   const app = new Application();
@@ -30,6 +30,24 @@ import { Application, Graphics } from "pixi.js";
       color: 0x00ff00,
     });
 
-  app.stage.addChild(rectangle);
+  app.stage.addChild(rectangle); // adds the shape to the canvas
+
+  const star = new Graphics()
+    .star(1000, 250, 12, 80, 2)
+    .fill({ color: 0xffffff });
+
+  app.stage.addChild(star);
+
+  const style = new TextStyle({
+    fill: 0xffffff,
+    fontSize: 72,
+    fontFamily: "Montserrat Medium",
+  });
+  const text = new Text({
+    text: "Hello Pixi",
+    style,
+  });
+
+  app.stage.addChild(text);
   document.body.appendChild(app.canvas);
 })();
