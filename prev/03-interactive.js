@@ -5,7 +5,6 @@ import {
   TextStyle,
   Sprite,
   Assets,
-  Container,
 } from "pixi.js";
 import { initDevtools } from "@pixi/devtools";
 
@@ -104,49 +103,6 @@ import { initDevtools } from "@pixi/devtools";
 
   sprite.anchor.set(0.5, 0.5);
 
-  // ticker ... sprites and movement?
-
-  const circle = new Graphics();
-
-  app.ticker.add(() => {
-    circle
-      .circle(
-        Math.random() * app.screen.width,
-        Math.random() * app.screen.height,
-        5
-      )
-      .fill({
-        color: 0xffffff,
-      });
-    // app.stage.addChild(circle);
-  });
-
   app.stage.addChild(sprite);
   document.body.appendChild(app.canvas);
-
-  const warriorsContainer = new Container();
-  app.stage.addChild(warriorsContainer);
-
-  const girlTexture = await Assets.load("/images/girl_warrior.png");
-  const girlSprite = Sprite.from(girlTexture);
-  girlSprite.scale.set(0.3, 0.3);
-
-  warriorsContainer.addChild(girlSprite);
-
-  const guyTexture = await Assets.load("/images/guy_warrior.png");
-  const guySprite = Sprite.from(guyTexture);
-  guySprite.scale.set(0.3, 0.3);
-
-  warriorsContainer.addChild(guySprite);
-
-  guySprite.x = 500;
-  guySprite.y = 200;
-
-  warriorsContainer.position.set(150, 150);
-
-  const x = girlSprite.getGlobalPosition().x;
-  const y = girlSprite.getGlobalPosition().y;
-
-  console.log(`x: ${girlSprite.x}, y: ${girlSprite.y}`); // this will give 0 because it local
-  console.log(`global: x: ${x}, y: ${y}`); // this will give global
 })();

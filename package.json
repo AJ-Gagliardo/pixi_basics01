@@ -2,5 +2,8 @@
   "dependencies": {
     "pixi.js": "^8.8.1",
     "vite": "^6.2.1"
+  },
+  "devDependencies": {
+    "@pixi/devtools": "^2.0.1"
   }
 }

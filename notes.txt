@@ -1,0 +1,42 @@
+
+
+
+
+
+4 types of objects we can create
+  geometric shapes
+  text
+  sprites
+  containers
+
+
+Geometric shapes  
+  creates graphic instance and we change it to squares, triangles, etc
+
+
+Text  
+  html tags 
+  text()
+  Bitmap
+
+
+
+
+https://pixijs.io/devtools/docs/guide/installation/
+
+
+//npx vite -> to run
+// npm install @pixi/devtools --save-dev
+
+Local vs Global coordinate systems
+  Global is the whole container... local is like a sub group inside the global one
+
+  Example ######
+    warriorsContainer.position.set(150, 150);
+
+  const x = girlSprite.getGlobalPosition().x;
+  const y = girlSprite.getGlobalPosition().y;
+
+  console.log(`x: ${girlSprite.x}, y: ${girlSprite.y}`); // this will give 0 because it local
+  console.log(`global: x: ${x}, y: ${y}`); // this will give global
+
