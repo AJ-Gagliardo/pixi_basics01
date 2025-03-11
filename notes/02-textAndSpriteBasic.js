@@ -61,35 +61,6 @@ import {
   const texture = await Assets.load("/images/logo2.svg");
   const sprite = new Sprite(texture);
 
-  // sprite.width = 200;
-  // sprite.height = 200;
-
-  // sprite.scale.x = 0.5;
-  // sprite.scale.y = 2;
-
-  sprite.scale.set(0.5, 1);
-
-  // text.x = 1000;
-  // text.y = 100;
-
-  // text.position.x = 1000;
-  // text.position.y = 100;
-
-  text.position.set(1000, 100);
-
-  //sprite.skew.x = Math.PI/4;
-  // sprite.skew.set(Math.PI / 4, 0); //skew (diagonal)
-
-  sprite.rotation = Math.PI / 4;
-
-  // sprite.pivot.x = 100; //fixed example
-  // sprite.pivot.y = 200;
-
-  // sprite.anchor.x = 0.5; //middle of the sprite
-  // sprite.anchor.y = 0.5;
-
-  sprite.anchor.set(0.5, 0.5);
-
   app.stage.addChild(sprite);
   document.body.appendChild(app.canvas);
 })();
