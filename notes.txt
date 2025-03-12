@@ -40,3 +40,7 @@ Local vs Global coordinate systems
   console.log(`x: ${girlSprite.x}, y: ${girlSprite.y}`); // this will give 0 because it local
   console.log(`global: x: ${x}, y: ${y}`); // this will give global
 
+
+Buddles are collections of assets
+
+

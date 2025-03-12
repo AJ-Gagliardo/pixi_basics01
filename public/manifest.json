@@ -1,0 +1,26 @@
+{
+  "bundles": [
+    {
+      "name": "ninjas",
+      "assets": [
+        {
+          "alias": "guy_ninja",
+          "src": "/images/guy_ninja.png"
+        }
+      ]
+    },
+    {
+      "name": "warriors",
+      "assets": [
+        {
+          "alias": "guy_warrior",
+          "src": "/images/guy_warrior.png"
+        },
+        {
+          "alias": "girl_warrior",
+          "src": "/images/girl_warrior.png"
+        }
+      ]
+    }
+  ]
+}
