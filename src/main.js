@@ -44,33 +44,34 @@ import { initDevtools } from "@pixi/devtools";
         spriteSourceSize: { x: 0, y: 0, w: 350, h: 350 },
       },
       talk4: {
-        frame: { x: 1050, y: 0, w: 350, h: 350 },
+        frame: { x: 600, y: 0, w: 200, h: 200 },
         sourceSize: { w: 350, h: 350 },
         spriteSourceSize: { x: 0, y: 0, w: 350, h: 350 },
       },
       talk5: {
-        frame: { x: 1400, y: 0, w: 350, h: 350 },
+        frame: { x: 800, y: 0, w: 200, h: 200 },
         sourceSize: { w: 350, h: 350 },
         spriteSourceSize: { x: 0, y: 0, w: 350, h: 350 },
       },
 
       walk1: {
-        frame: { x: 0, y: 350, w: 350, h: 350 },
+        //w and h shuold be the same in the images from the same animation
+        frame: { x: 0, y: 200, w: 200, h: 200 }, // for this I had to move Y , Y stays the same in next ones, x changes
         sourceSize: { w: 350, h: 350 },
         spriteSourceSize: { x: 0, y: 0, w: 350, h: 350 },
       },
       walk2: {
-        frame: { x: 350, y: 350, w: 350, h: 350 },
+        frame: { x: 200, y: 200, w: 200, h: 200 },
         sourceSize: { w: 350, h: 350 },
         spriteSourceSize: { x: 0, y: 0, w: 350, h: 350 },
       },
       walk3: {
-        frame: { x: 700, y: 350, w: 350, h: 350 },
+        frame: { x: 400, y: 200, w: 200, h: 200 },
         sourceSize: { w: 350, h: 350 },
         spriteSourceSize: { x: 0, y: 0, w: 350, h: 350 },
       },
       walk4: {
-        frame: { x: 1050, y: 350, w: 350, h: 350 },
+        frame: { x: 600, y: 200, w: 200, h: 200 },
         sourceSize: { w: 350, h: 350 },
         spriteSourceSize: { x: 0, y: 0, w: 350, h: 350 },
       },
@@ -80,7 +81,7 @@ import { initDevtools } from "@pixi/devtools";
       // size: { w: 1750, h: 700 },
     },
     animations: {
-      talk: ["talk1", "talk2", "talk3"],
+      talk: ["talk1", "talk2", "talk3", "talk4", "talk5"],
       walk: ["walk1", "walk2", "walk3", "walk4"],
     },
   };
@@ -88,9 +89,9 @@ import { initDevtools } from "@pixi/devtools";
   const spritesheet = new Spritesheet(texture, atlasData);
   await spritesheet.parse();
 
-  const animatedSprite = new AnimatedSprite(spritesheet.animations.talk);
+  const animatedSprite = new AnimatedSprite(spritesheet.animations.walk);
   app.stage.addChild(animatedSprite);
 
   animatedSprite.play();
-  animatedSprite.animationSpeed = 0.05;
+  animatedSprite.animationSpeed = 0.11;
 })();
