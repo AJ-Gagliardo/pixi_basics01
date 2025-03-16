@@ -28,18 +28,26 @@ import { initDevtools } from "@pixi/devtools";
   const atlasData = {
     frames: {
       talk1: {
-        // //w + h width adn size of image (should be the same in all )
-        frame: { x: 0, y: 0, w: 200, h: 200 }, // x and y are coordinates to find sprite
-        sourceSize: { w: 350, h: 350 },
-        spriteSourceSize: { x: 0, y: 0, w: 350, h: 350 },
+        frame: {
+          x: 0,
+          y: 0,
+          w: 350,
+          h: 350,
+        },
+        //coordinations to get the sprice
+        sourceSize: { w: 350, h: 350 }, //the actual sprite, coordinate on the sprite sheet
+
+        spritesSourceSize: { x: 0, y: 0, w: 350, h: 350 }, //space arund the sprite
+        // this can be done better with an application instead of manually
+        // an app can help me with the json to be more specific
       },
       talk2: {
-        frame: { x: 200, y: 0, w: 200, h: 200 },
+        frame: { x: 350, y: 0, w: 350, h: 350 },
         sourceSize: { w: 350, h: 350 },
         spriteSourceSize: { x: 0, y: 0, w: 350, h: 350 },
       },
       talk3: {
-        frame: { x: 400, y: 0, w: 200, h: 200 },
+        frame: { x: 700, y: 0, w: 350, h: 350 },
         sourceSize: { w: 350, h: 350 },
         spriteSourceSize: { x: 0, y: 0, w: 350, h: 350 },
       },
@@ -80,7 +88,7 @@ import { initDevtools } from "@pixi/devtools";
       // size: { w: 1750, h: 700 },
     },
     animations: {
-      talk: ["talk1", "talk2", "talk3"],
+      talk: ["talk1", "talk2", "talk3", "talk4", "talk5"],
       walk: ["walk1", "walk2", "walk3", "walk4"],
     },
   };
